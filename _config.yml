@@ -1,0 +1,19 @@
+# Site settings
+name: 令狐小影
+location: 陕西西安
+company: 神州数码
+position: Android攻城狮
+github: https://github.com/luckerbai
+facebook: https://www.facebook.com/luckerbai
+phone: 134XXXXXXXX
+email: luckerbai@163.com
+
+baseurl: "/luckerbai.github.io"
+
+permalink: /:year/:month/:day/:title/
+
+exclude: ['README.md']
+
+# Build settings
+markdown: kramdown
+

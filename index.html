@@ -1,22 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<title>My Blog</title>
-</head>
+---
+layout: default
+---
 
-<body style="background-image: url('img/body-bg-cat.jpg');">
-	<div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>JackBai's Blog</h1>
-              <span class="subheading">What you think, what you will be!</span>
+<div id="ace-content" class="ace-container-shift">
+    <div class="ace-container">
+        <div id="ace-nav-wrap" class="hidden-sm hidden-xs">
+            <div class="ace-nav-cont">
+                <div id="ace-nav-scroll">
+                    <nav id="ace-nav" class="ace-nav">
+                        <ul class="clear-list">
+                            <li>
+                              <a href="index.html" data-tooltip="Home"><img class="avatar avatar-42" src="{{ '/styles/img/show-star.png' | prepend: site.baseurl }}" alt=""></a>
+                            </li>
+                            <li>
+                              <a href="#basic_info" data-tooltip="基本信息"><span class="ace-icon ace-icon-home"></span></a>
+                            </li>
+                            <li>
+                              <a href="#profetional" data-tooltip="职业技能"><span class="ace-icon ace-icon-experience"></span></a>
+                            </li>
+
+                            <li>
+                              <a href="#education" data-tooltip="教育经历"><span class="ace-icon ace-icon-portfolio"></span></a>
+                            </li>
+                            
+                            <li>
+                              <a href="#experience" data-tooltip="工作经历"><span class="ace-icon ace-icon-references"></span></a>
+                            </li>
+                            <li>
+                              <a href="#certification" data-tooltip="获得证书"><span class="ace-icon ace-icon-blog"></span></a>
+                            </li>
+                            <li>
+                              <a href="#personal_project" data-tooltip="个人作品"><span class="ace-icon ace-icon-snowflake-o"></span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="ace-nav-tools" class="hidden">
+                    <span class="ace-icon ace-icon-dots-three-horizontal"></span>
+
+                    <button id="ace-nav-arrow" class="clear-btn">
+                        <span class="ace-icon ace-icon-chevron-thin-down"></span>
+                    </button>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-</body>
-</html>
+
+            <!-- <div class="ace-nav-btm"></div> -->
+        </div><!-- .ace-nav-wrap -->
+
+        <div class="ace-paper-stock">
+            <main class="ace-paper clearfix">
+                <div class="ace-paper-cont clear-mrg">
+                    <!-- START: PAGE CONTENT -->
+                    <div class="padd-box clear-mrg">
+
+                    {% include resumer_01-basic.html %}
+
+                    {% include resumer_02-profetional.html %}
+
+                    {% include resumer_03-education.html %}
+
+                    {% include resumer_04-experience.html %}
+
+                    {% include resumer_05-certification.html %}
+
+                    {% include resumer_06-personal_project.html %}
+                        
+                    </div><!-- .padd-box -->
+                <!-- END: PAGE CONTENT -->
+                </div><!-- .ace-paper-cont -->
+            </main><!-- .ace-paper -->
+        </div><!-- .ace-paper-stock -->
+    </div><!-- .ace-container -->
+</div><!-- #ace-content -->
